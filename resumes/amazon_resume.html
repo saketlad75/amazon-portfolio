@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hari Prasad Renganathan - Amazon Style Resume</title>
+  <style>
+    :root{
+      --amazon-black:#131921;
+      --amazon-dark:#232f3e;
+      --amazon-gold:#febd69;
+      --amazon-orange:#f08804;
+      --amazon-link:#007185;
+      --star:#ffa41c;
+      --success:#067d62;
+      --badge-blue:#26a6fe;
+      --badge-green:#007600;
+      --muted:#555;
+      --border:#e3e6e6;
+      --bg:#ffffff;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font:15px/1.6 Arial, Helvetica, sans-serif;color:#111;background:#f6f6f6}
+
+    /* Top Nav */
+    .nav{background:var(--amazon-black);color:#fff;padding:10px 16px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+    .nav .brand{font-weight:700;font-size:20px;letter-spacing:.5px}
+    .nav .search{flex:1;min-width:220px;display:flex}
+    .nav input{flex:1;padding:8px;border:none;border-radius:4px 0 0 4px}
+    .nav button{padding:8px 12px;border:none;background:var(--amazon-gold);border-radius:0 4px 4px 0;cursor:pointer}
+    .nav a{color:#fff;text-decoration:none;opacity:.9}
+
+    .subnav{background:var(--amazon-dark);color:#fff;padding:8px 16px;font-size:14px}
+
+    /* Layout */
+    .container{max-width:1180px;margin:18px auto;padding:0 16px}
+    .grid{display:grid;grid-template-columns:2fr 1fr;gap:22px}
+
+    /* Card */
+    .card{background:var(--bg);border:1px solid var(--border);border-radius:6px;box-shadow:0 1px 0 rgba(0,0,0,.04)}
+    .card .body{padding:18px}
+    .divider{height:1px;background:var(--border);margin:8px 0 16px}
+
+    /* Product header */
+    .title{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .title h1{margin:0;font-size:28px}
+    .meta{color:#565959;font-size:13px}
+    .rating{color:var(--star);font-size:16px}
+    .small-gray{color:#777;font-size:12px}
+    .badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .badge{font-size:12px;padding:2px 8px;border-radius:12px;border:1px solid var(--border);display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+    .badge.choice{background:#232f3e;color:#fff;border-color:#232f3e}
+    .badge.green{background:#edfaf1;color:#0a6b3a;border-color:#b6e2c8}
+
+    /* Two column left details */
+    h2.section{font-size:20px;margin:0 0 8px}
+    h3.role{margin:0;font-size:16px}
+    .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+    .pill{display:inline-block;background:#eef2f7;border:1px solid #d7dfea;border-radius:999px;padding:2px 10px;font-size:12px;color:#334155}
+    .loc{color:#565959}
+    ul.bullets{margin:8px 0 12px 18px}
+
+    /* Right sidebar */
+    aside .pricebox{padding:16px;border:1px solid var(--border);border-radius:8px}
+    .instock{color:var(--badge-green);font-weight:700}
+    .qty{display:flex;align-items:center;gap:8px;margin:8px 0}
+    .qty select{padding:6px;border:1px solid var(--border);border-radius:6px}
+    .cta{display:flex;flex-direction:column;gap:10px;margin:14px 0}
+    .btn{padding:10px 14px;border-radius:8px;border:1px solid #d5d9d9;background:linear-gradient(#ffd814,#f9a41a);cursor:pointer;font-weight:700}
+    .btn.buy{background:linear-gradient(#ffa41c,#f08804)}
+
+    .sidebar-section{margin-top:16px}
+    .sidebar-section h4{margin:0 0 6px;font-size:16px}
+    .kv{margin:0;color:#333}
+    .kv small{display:block;color:#666}
+    .list-tight{margin:6px 0 0 18px}
+
+    .skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+
+    a.link{color:var(--amazon-link);text-decoration:none}
+
+    /* Footer note */
+    .footnote{font-size:12px;color:#666;margin-top:10px}
+
+    /* Print styles */
+    @media print{
+      .nav,.subnav,.btn,.qty,.footnote{display:none !important}
+      body{background:#fff}
+      .container{margin:0;padding:0}
+      .grid{gap:16px}
+      .card,.pricebox{border-color:#ccc;box-shadow:none}
+    }
+
+    @media (max-width: 900px){
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- Simulated Amazon header -->
+  <div class="nav">
+    <div class="brand">amazon</div>
+    <div class="search">
+      <input placeholder="what does a good employee look like?" />
+      <button>Search</button>
+    </div>
+    <a href="#">Deals</a>
+    <a href="#">Account & Lists</a>
+    <a href="#">Returns</a>
+    <a href="#">Cart</a>
+  </div>
+  <div class="subnav">Deliver to New York, NY • Contact: 917-xxx-xxxx • <a class="link" href="mailto:hr2514@columbia.edu" style="color:#fff;text-decoration:underline">hr2514@columbia.edu</a> • <a class="link" style="color:#fff;text-decoration:underline" href="https://linkedin.com/in/hariprasad20/" target="_blank" rel="noreferrer">linkedin.com/in/hariprasad20/</a></div>
+
+  <div class="container">
+    <div class="grid">
+
+      <!-- LEFT: Main content -->
+      <section class="card">
+        <div class="body">
+          <div class="title">
+            <div>
+              <h1>Hari Prasad Renganathan</h1>
+              <div class="row small-gray">
+                <span>Brand: Candidate</span>
+                <span>•</span>
+                <span class="rating">★★★★★</span>
+                <span class="small-gray">412,173 ratings • 1000+ answered questions</span>
+              </div>
+              <div class="badges">
+                <span class="badge choice">Amazon's Choice</span>
+                <span class="badge green">Climate Pledge Friendly</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <h2 class="section">Description</h2>
+          <p class="meta">Innovative and proactive Data Scientist with a builder mindset, delivering end-to-end ML products from ideation to production. Strong track record in model governance, scalable pipelines, financial analytics, and cross-functional leadership.</p>
+
+          <div class="divider"></div>
+
+          <h2 class="section">Work Experience</h2>
+
+          <article>
+            <div class="row" style="justify-content:space-between">
+              <h3 class="role">Take-Two Interactive Software, Inc. - Data Scientist</h3>
+              <span class="loc">New York, NY • Aug 2022 - Present</span>
+            </div>
+            <ul class="bullets">
+              <li>Redesigned model store client to enable version control of model metadata and enforce restricted registrations into development, improving governance and cross-team collaboration.</li>
+              <li>Built an application to compare 1400 models simultaneously and register in batch, cutting deployment time by 80 percent.</li>
+              <li>Productionized an end-to-end pipeline to classify catalog game brands and auto-allocate promotions, automating 90 percent of manual steps.</li>
+              <li>Architected and deployed a Streamlit-based financial audit dashboard combining 5 sources that helped auditors finish reviews faster.</li>
+              <li>Implemented model validation to track and evaluate performance across versions.</li>
+              <li>Optimized sales forecasting with attached-rate and aggregated models, increasing revenue forecast accuracy by 25 percent.</li>
+            </ul>
+          </article>
+
+          <article>
+            <div class="row" style="justify-content:space-between">
+              <h3 class="role">Take-Two Interactive Software, Inc. - Data Science Intern</h3>
+              <span class="loc">New York, NY • May 2022 - Aug 2022</span>
+            </div>
+            <ul class="bullets">
+              <li>Partnered with ML Engineers and Analysts to ship price elasticity outputs into production for real-time sales insights.</li>
+              <li>Completed competitive analysis across 72 companies using Snowflake, SQL, Tableau, and Python to identify trends and risks.</li>
+            </ul>
+          </article>
+
+          <article>
+            <div class="row" style="justify-content:space-between">
+              <h3 class="role">Ask2AI - Financial Data Scientist Spring Intern</h3>
+              <span class="loc">New York, NY • Jan 2022 - May 2022</span>
+            </div>
+            <ul class="bullets">
+              <li>Forecasted returns and volatility with a 650-dimensional macroeconomic time series achieving 85 percent accuracy for returns and 80 percent for volatility.</li>
+              <li>Applied rolling PCA to reduce dimensionality by 90 percent while retaining 95 percent explained variance.</li>
+              <li>Built LSTM models reaching a 7 percent MAPE on return prediction.</li>
+            </ul>
+          </article>
+
+          <article>
+            <div class="row" style="justify-content:space-between">
+              <h3 class="role">GoTTR - Data Engineer</h3>
+              <span class="loc">New York, NY • Jul 2021 - Dec 2021</span>
+            </div>
+            <ul class="bullets">
+              <li>Regularized scraping and data modeling for a 100 GB dataset, reducing 4 hours of manual work to seconds.</li>
+              <li>Led a team of 5 to migrate to GCP and implement email alerts, saving 7000 dollars monthly.</li>
+            </ul>
+          </article>
+
+          <article>
+            <div class="row" style="justify-content:space-between">
+              <h3 class="role">JotterWolf, Inc - Co-founder & CTO</h3>
+              <span class="loc">New York, NY • Aug 2023 - Dec 2023</span>
+            </div>
+            <ul class="bullets">
+              <li>Launched Jotterwolf, a productivity CRM tool and helped over 2000 job seekers; managed 4 interns.</li>
+              <li>Made it to the finals at Columbia Startup Challenge 2024; featured at Columbia Entrepreneurship blogs.</li>
+              <li>Designed and implemented a web scraping solution, increasing efficiency in tracking job applications and saved 2+ hours per day.</li>
+              <li>Developed a RAG-based application using AWS Bedrock and GPT-3.5, improving interview success rates by 75%.</li>
+              <li>Built a robust & scalable backend with FastAPI, and deployed on AWS EC2, handling over 50,000 monthly user interactions.</li>
+            </ul>
+          </article>
+
+          <article>
+            <div class="row" style="justify-content:space-between">
+              <h3 class="role">DADDYODA - Co-founder</h3>
+              <span class="loc">Coimbatore, India • Jul 2020 - Jul 2021</span>
+            </div>
+            <ul class="bullets">
+              <li>Built Daddyoda, a blogging community platform for storytellers to express their thoughts globally.</li>
+              <li>Automated the delivery of 50+ weekly promotional emails to a user base of 10,000+, utilizing Python. Increased operational efficiency by 30% and reduced manual effort by 20 hours per week.</li>
+              <li>Implemented text analytics (NLP) to predict customer sentiments in reviews, reducing Customer Acquisition Cost (CAC) by 20% through improved targeting and personalized marketing strategies.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- RIGHT: Sidebar -->
+      <aside>
+        <div class="card">
+          <div class="body pricebox">
+            <div class="instock">In Stock</div>
+            <div class="qty">
+              <strong>Qty:</strong>
+              <select>
+                <option>1</option><option>2</option><option>3</option>
+              </select>
+            </div>
+            <div class="cta">
+              <button class="btn">Add to Cart</button>
+              <button class="btn buy">Buy Now</button>
+            </div>
+            <div class="small-gray">Customers who viewed this also viewed: <em>academic projects, achievements, and skills</em>.</div>
+          </div>
+        </div>
+
+        <div class="card sidebar-section">
+          <div class="body">
+            <h4>EDUCATION</h4>
+            <p class="kv"><strong>Columbia University</strong><br><small>Master of Science, Data Science • New York, NY • 2022</small></p>
+            <p class="kv"><strong>Kumaraguru College of Technology</strong><br><small>Bachelor of Engineering, Mechanical Engineering • India • 2021</small></p>
+          </div>
+        </div>
+
+        <div class="card sidebar-section">
+          <div class="body">
+            <h4>SKILLS</h4>
+            <div class="skills-grid">
+              <span class="pill">Python</span>
+              <span class="pill">R</span>
+              <span class="pill">SQL</span>
+              <span class="pill">Snowflake</span>
+              <span class="pill">AWS</span>
+              <span class="pill">PySpark</span>
+              <span class="pill">Databricks</span>
+              <span class="pill">Tableau</span>
+              <span class="pill">Flask</span>
+              <span class="pill">Pandas</span>
+              <span class="pill">Scikit-learn</span>
+              <span class="pill">Keras</span>
+              <span class="pill">Matplotlib</span>
+              <span class="pill">Seaborn</span>
+              <span class="pill">Git</span>
+              <span class="pill">Dash</span>
+              <span class="pill">Web Scraping</span>
+              <span class="pill">Time Series</span>
+              <span class="pill">Gen AI</span>
+              <span class="pill">LangChain</span>
+              <span class="pill">Bedrock</span>
+              <span class="pill">RAG</span>
+              <span class="pill">Pinecone</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card sidebar-section">
+          <div class="body">
+            <h4>PROJECTS</h4>
+            <p class="kv"><strong>AI Clone of Myself</strong><br><small>Jan 2024</small></p>
+            <ul class="list-tight">
+              <li>Built an AI clone on AWS Bedrock with Llama 3.1, Boto3, Streamlit, and LangChain, using FAISS or Pinecone for vector search and CSV-based memory.</li>
+            </ul>
+            <p class="kv" style="margin-top:10px"><strong>Onion Supply Chain Forecasting - Research</strong><br><small>Jan 2022 • Published in Journal of Logistics, Supply Chain and Retail Management - Vol 5 Issue 1</small></p>
+            <ul class="list-tight">
+              <li>EDA and ARIMA-based forecasting for 2-year onion price trends working with a 3-person team.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card sidebar-section">
+          <div class="body">
+            <h4>ACHIEVEMENTS</h4>
+            <ul class="list-tight">
+              <li>Speaker @ TedX Binghamton • Sep 2025</li>
+              <li>Mentor @ MyRealProduct (Helped 700+ aspirants build end-to-end AI products) • Jul 2024 - Present</li>
+              <li>Author @ Data & AI with Hari newsletter (Sharing weekly AI updates for the past 85 weeks) • Jul 2024 - Present</li>
+            </ul>
+            <p class="footnote">View profile: <a class="link" href="https://linkedin.com/in/hariprasad20/" target="_blank" rel="noreferrer">linkedin.com/in/hariprasad20/</a></p>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</body>
+</html>
