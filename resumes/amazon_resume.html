@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hari Prasad Renganathan - Amazon Style Resume</title>
+  <title>Saket Lad</title>
   <style>
     :root{
       --amazon-black:#131921;
@@ -23,8 +23,9 @@
     body{margin:0;font:15px/1.6 Arial, Helvetica, sans-serif;color:#111;background:#f6f6f6}
 
     /* Top Nav */
-    .nav{background:var(--amazon-black);color:#fff;padding:10px 16px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+    .nav{background:#233448;color:#fff;padding:10px 16px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
     .nav .brand{font-weight:700;font-size:20px;letter-spacing:.5px}
+    .nav .brand img{display:block;height:24px}
     .nav .search{flex:1;min-width:220px;display:flex}
     .nav input{flex:1;padding:8px;border:none;border-radius:4px 0 0 4px}
     .nav button{padding:8px 12px;border:none;background:var(--amazon-gold);border-radius:0 4px 4px 0;cursor:pointer}
@@ -75,6 +76,13 @@
     .kv small{display:block;color:#666}
     .list-tight{margin:6px 0 0 18px}
 
+    .edu-logo{height:1em;vertical-align:middle;margin-right:8px}
+    .education{font-size:18px}
+    .education h4{font-size:20px}
+    .education .edu-logo{height:2em}
+    .education .kv{margin-bottom:8px}
+    .company-logo{height:2em;vertical-align:middle;margin-right:8px}
+
     .skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
 
     a.link{color:var(--amazon-link);text-decoration:none}
@@ -99,17 +107,17 @@
 <body>
   <!-- Simulated Amazon header -->
   <div class="nav">
-    <div class="brand">amazon</div>
+    <div class="brand"><img src="../assets/Amazon-Symbol.jpg" alt="Amazon logo"></div>
     <div class="search">
       <input placeholder="what does a good employee look like?" />
       <button>Search</button>
     </div>
-    <a href="#">Deals</a>
+    <a href="../assets/Resume_Saket_Lad_SDE.pdf" download>Resume</a>
     <a href="#">Account & Lists</a>
     <a href="#">Returns</a>
     <a href="#">Cart</a>
   </div>
-  <div class="subnav">Deliver to New York, NY • Contact: 917-xxx-xxxx • <a class="link" href="mailto:hr2514@columbia.edu" style="color:#fff;text-decoration:underline">hr2514@columbia.edu</a> • <a class="link" style="color:#fff;text-decoration:underline" href="https://linkedin.com/in/hariprasad20/" target="_blank" rel="noreferrer">linkedin.com/in/hariprasad20/</a></div>
+  <div class="subnav">Deliver to New York, NY • Contact: +1-(631)-366-9454 • <a class="link" href="mailto:saket.lad@stonybrook.edu" style="color:#fff;text-decoration:underline">saket.lad@stonybrook.edu</a> • <a class="link" style="color:#fff;text-decoration:underline" href="https://linkedin.com/in/saket-lad" target="_blank" rel="noopener noreferrer">linkedin.com/in/saket-lad/</a></div>
 
   <div class="container">
     <div class="grid">
@@ -119,15 +127,15 @@
         <div class="body">
           <div class="title">
             <div>
-              <h1>Hari Prasad Renganathan</h1>
+              <h1>Saket Vijay Lad</h1>
               <div class="row small-gray">
-                <span>Brand: Candidate</span>
+                <span>Brand: Software Engineer</span>
                 <span>•</span>
                 <span class="rating">★★★★★</span>
                 <span class="small-gray">412,173 ratings • 1000+ answered questions</span>
               </div>
               <div class="badges">
-                <span class="badge choice">Amazon's Choice</span>
+                <span class="badge choice">Amazon&#39;s Choice</span>
                 <span class="badge green">Climate Pledge Friendly</span>
               </div>
             </div>
@@ -136,7 +144,7 @@
           <div class="divider"></div>
 
           <h2 class="section">Description</h2>
-          <p class="meta">Innovative and proactive Data Scientist with a builder mindset, delivering end-to-end ML products from ideation to production. Strong track record in model governance, scalable pipelines, financial analytics, and cross-functional leadership.</p>
+          <p class="meta">Ambitious Data Science master’s candidate at Stony Brook University, with 2 patents, 4 research publications, and strong project experience in AI/ML. A Data Science and Machine Learning enthusiast with a keen interest in the Deep Learning, computer vision. I enjoy building and researching models that advance real-world applications across computer vision, NLP, and generative AI. Looking for opportunities where I can apply my knowledge and further pursue my interests in the field of Machine Learning, Deep Learning and Data Science with a summer 2026 internship. I have gained hands-on experience through my internships working on biometric systems and  financial document summarization. My projects span ensemble deep learning for medical imaging, generative AI for trade platforms, and NLP-driven chatbots, several of which have been recognized at hackathons like Barclays Hack-o-Hire and Amazon Sambhav . Currently, I am exploring LLMs, vision transformers.</p>
 
           <div class="divider"></div>
 
@@ -144,76 +152,77 @@
 
           <article>
             <div class="row" style="justify-content:space-between">
-              <h3 class="role">Take-Two Interactive Software, Inc. - Data Scientist</h3>
-              <span class="loc">New York, NY • Aug 2022 - Present</span>
+              <h3 class="role"><img class="company-logo" src="../assets/SPJIMR-Logo.png" alt="SPJIMR logo">SP Jain Institute of Management and Research - Machine Learning Intern</h3>
+              <span class="loc">Mumbai, Maharashtra • Feb 2025 – May 2025</span>
             </div>
             <ul class="bullets">
-              <li>Redesigned model store client to enable version control of model metadata and enforce restricted registrations into development, improving governance and cross-team collaboration.</li>
-              <li>Built an application to compare 1400 models simultaneously and register in batch, cutting deployment time by 80 percent.</li>
-              <li>Productionized an end-to-end pipeline to classify catalog game brands and auto-allocate promotions, automating 90 percent of manual steps.</li>
-              <li>Architected and deployed a Streamlit-based financial audit dashboard combining 5 sources that helped auditors finish reviews faster.</li>
-              <li>Implemented model validation to track and evaluate performance across versions.</li>
-              <li>Optimized sales forecasting with attached-rate and aggregated models, increasing revenue forecast accuracy by 25 percent.</li>
+              <li>Enhanced factual consistency by 34% by fine-tuning the BART model on over 10-K filings using 48 gold-standard summaries, integrating a custom keyword-attention mechanism to prioritize financially salient terms.</li>
+              <li>Benchmarked BART vs. Gemini Pro across 32 companies, improving summarization quality by +8 ROUGE-L and achieving a BERT F1 of 81.11%, demonstrating human-level alignment and outperforming baseline models by 12%.</li>
             </ul>
           </article>
 
           <article>
             <div class="row" style="justify-content:space-between">
-              <h3 class="role">Take-Two Interactive Software, Inc. - Data Science Intern</h3>
-              <span class="loc">New York, NY • May 2022 - Aug 2022</span>
+              <h3 class="role"><img class="company-logo" src="../assets/technocrat.png" alt="Technocrat Solutions logo">Technocrat Solutions - Software Engineer Intern</h3>
+              <span class="loc">Goregaon, Maharashtra • Dec 2024 – May 2025</span>
             </div>
             <ul class="bullets">
-              <li>Partnered with ML Engineers and Analysts to ship price elasticity outputs into production for real-time sales insights.</li>
-              <li>Completed competitive analysis across 72 companies using Snowflake, SQL, Tableau, and Python to identify trends and risks.</li>
+              <li>Optimized a production-grade SQL Server database for large-scale biometric data, applying indexing, normalization, and partitioning to improve query performance by 40% and reduce latency under load.</li>
+              <li>Automated Python-based ETL pipelines for end-to-end data ingestion, transformation, and validation, reducing redundancy by 30%, improving data reliability, and accelerating retrieval speed across analytics modules.</li>
             </ul>
           </article>
 
           <article>
             <div class="row" style="justify-content:space-between">
-              <h3 class="role">Ask2AI - Financial Data Scientist Spring Intern</h3>
-              <span class="loc">New York, NY • Jan 2022 - May 2022</span>
+              <h3 class="role"><img class="company-logo" src="../assets/iitb.svg" alt="IIT Bombay logo">Indian Institute of Technology, Bombay - Machine Learning Research Intern</h3>
+              <span class="loc">Mumbai, Maharashtra • Jan 2024 – Aug 2024</span>
             </div>
             <ul class="bullets">
-              <li>Forecasted returns and volatility with a 650-dimensional macroeconomic time series achieving 85 percent accuracy for returns and 80 percent for volatility.</li>
-              <li>Applied rolling PCA to reduce dimensionality by 90 percent while retaining 95 percent explained variance.</li>
-              <li>Built LSTM models reaching a 7 percent MAPE on return prediction.</li>
+              <li>Engineered a mobile app for contactless fingerprint authentication using Kotlin, YOLOv8x, and TensorFlow, achieving 2.5% EER and reducing latency by 20% over 4+ deployments.</li>
+              <li>Led development of a contactless fingerprint recognition system for the Government of India, collaborating with UIDAI and Mahindra Defense, securing $250K in funding via industry–academia partnerships.</li>
+              <li>Designed a high-accuracy deep learning model for contactless palmprint identification, achieving an Equal Error Rate (EER) of 2.65% and improving recognition accuracy by 21% over baseline CNNs.</li>
+              <li>Implemented a Siamese Neural Network using shearlets and contourlets for precise feature extraction, reducing training loss and epochs by 33% and parameters by 37% over state-of-the-art models.</li>
+              <li>Built a custom TensorFlow wavelet library to incorporate Haar and db2 wavelet backpropagation, accelerating model convergence by 1.4x and improving training efficiency on edge devices.</li>
+            </ul>
+          </article>
+
+          <div class="divider"></div>
+
+          <h2 class="section">Projects</h2>
+
+          <article>
+            <h3 class="role">SafeArt: Cloud-Native Poster Compliance Platform · <a class="link" href="https://github.com/saketlad75/safeart" target="_blank" rel="noopener noreferrer">GitHub</a></h3>
+            <div class="meta">Java, AWS (S3, DynamoDB, SQS, Step Functions), Docker</div>
+            <ul class="bullets">
+              <li>Architected a serverless microservice on AWS using API Gateway, Lambda, S3, DynamoDB, and SQS for async image compliance analysis, enabling 10K+ jobs/hour.</li>
+              <li>Added operational resilience with idempotent requests, retry/backoff, DLQ handling, and minimal CloudWatch monitoring, achieving P95 < 2s cached evaluations and reducing MTTR by 60%.</li>
             </ul>
           </article>
 
           <article>
-            <div class="row" style="justify-content:space-between">
-              <h3 class="role">GoTTR - Data Engineer</h3>
-              <span class="loc">New York, NY • Jul 2021 - Dec 2021</span>
-            </div>
+            <h3 class="role">ExportEase: Global Reach, Seamless Collaboration · <a class="link" href="https://drive.google.com/file/d/1rB9iB4FR5CVPO5qXhtkkF9z-iJZZ7I0d/view" target="_blank" rel="noopener noreferrer">Demo</a></h3>
+            <div class="meta">AWS, Python, HuggingFace, Django</div>
             <ul class="bullets">
-              <li>Regularized scraping and data modeling for a 100 GB dataset, reducing 4 hours of manual work to seconds.</li>
-              <li>Led a team of 5 to migrate to GCP and implement email alerts, saving 7000 dollars monthly.</li>
+              <li>Engineered an end-to-end trade communication platform integrating AWS Translate and generative AI for multilingual summarization, reducing manual effort by 30% and response time by 45%.</li>
+              <li>Developed Doc Buddy, an AI-powered assistant using HuggingFace LayoutLM for Talk to PDF, real-time Q&A, and multilingual summaries, accelerating document processing by 4x and enhancing collaboration across 5+ countries.</li>
             </ul>
           </article>
 
           <article>
-            <div class="row" style="justify-content:space-between">
-              <h3 class="role">JotterWolf, Inc - Co-founder & CTO</h3>
-              <span class="loc">New York, NY • Aug 2023 - Dec 2023</span>
-            </div>
+            <h3 class="role">Barclays ConnectCare · <a class="link" href="https://github.com/saketlad75/ConnectCare-Hack-o-Hire" target="_blank" rel="noopener noreferrer">GitHub</a></h3>
+            <div class="meta">Kotlin, AWS (S3, EC2), Python, GCP, NLP, Django</div>
             <ul class="bullets">
-              <li>Launched Jotterwolf, a productivity CRM tool and helped over 2000 job seekers; managed 4 interns.</li>
-              <li>Made it to the finals at Columbia Startup Challenge 2024; featured at Columbia Entrepreneurship blogs.</li>
-              <li>Designed and implemented a web scraping solution, increasing efficiency in tracking job applications and saved 2+ hours per day.</li>
-              <li>Developed a RAG-based application using AWS Bedrock and GPT-3.5, improving interview success rates by 75%.</li>
-              <li>Built a robust & scalable backend with FastAPI, and deployed on AWS EC2, handling over 50,000 monthly user interactions.</li>
+              <li>Innovated an AI-driven support system using GCP Dialogflow and sentiment-aware NLP, cutting backend latency by 35% and improving critical issue resolution time by 45%.</li>
+              <li>Deployed a secure Kotlin–Firebase Android app with AWS S3 integration, providing real-time access to 1.5K+ users and reducing support response time by 40%.</li>
             </ul>
           </article>
 
           <article>
-            <div class="row" style="justify-content:space-between">
-              <h3 class="role">DADDYODA - Co-founder</h3>
-              <span class="loc">Coimbatore, India • Jul 2020 - Jul 2021</span>
-            </div>
+            <h3 class="role">ARMD-NetX: An Ensemble Learning Network for ARMD Detection · <a class="link" href="https://drive.google.com/file/d/1IBGs17hhEvPy4PPVrgi_K8lZoSKz3hCk/view" target="_blank" rel="noopener noreferrer">Paper</a> · <a class="link" href="https://www.kaggle.com/datasets/saketlad/armd-combined-dataset-fundus-and-oct" target="_blank" rel="noopener noreferrer">Dataset</a></h3>
+            <div class="meta">OpenCV, TensorFlow, Ensemble Learning</div>
             <ul class="bullets">
-              <li>Built Daddyoda, a blogging community platform for storytellers to express their thoughts globally.</li>
-              <li>Automated the delivery of 50+ weekly promotional emails to a user base of 10,000+, utilizing Python. Increased operational efficiency by 30% and reduced manual effort by 20 hours per week.</li>
-              <li>Implemented text analytics (NLP) to predict customer sentiments in reviews, reducing Customer Acquisition Cost (CAC) by 20% through improved targeting and personalized marketing strategies.</li>
+              <li>Built a multimodal deep learning framework combining CNNs and ensemble meta-classifiers for ARMD diagnosis, achieving 99.41% accuracy on OCT and 97.70% on fundus images, outperforming baselines by 12–15%.</li>
+              <li>Published an OCT–Fundus dataset with 12K+ labeled images and proposed a Grad-CAM–based diagnostic pipeline, improving model explainability by 28% and advancing XAI in ophthalmology.</li>
             </ul>
           </article>
         </div>
@@ -226,7 +235,7 @@
             <div class="instock">In Stock</div>
             <div class="qty">
               <strong>Qty:</strong>
-              <select>
+              <select aria-label="Quantity">
                 <option>1</option><option>2</option><option>3</option>
               </select>
             </div>
@@ -239,10 +248,10 @@
         </div>
 
         <div class="card sidebar-section">
-          <div class="body">
+          <div class="body education">
             <h4>EDUCATION</h4>
-            <p class="kv"><strong>Columbia University</strong><br><small>Master of Science, Data Science • New York, NY • 2022</small></p>
-            <p class="kv"><strong>Kumaraguru College of Technology</strong><br><small>Bachelor of Engineering, Mechanical Engineering • India • 2021</small></p>
+            <p class="kv"><img class="edu-logo" src="../assets/sbu.png" alt="Stony Brook University logo"><strong>Stony Brook University</strong><br><small>Master of Science, Data Science • New York, NY • 2025-2027</small></p>
+            <p class="kv"><img class="edu-logo" src="../assets/spit.png" alt="Sardar Patel Institute of Technology logo"><strong>Sardar Patel Institute of Technology</strong><br><small>Bachelor of Technology, Electronics and Telecommunication Engineering • India • 2021-2025</small></p>
           </div>
         </div>
 
@@ -251,42 +260,63 @@
             <h4>SKILLS</h4>
             <div class="skills-grid">
               <span class="pill">Python</span>
-              <span class="pill">R</span>
-              <span class="pill">SQL</span>
-              <span class="pill">Snowflake</span>
-              <span class="pill">AWS</span>
-              <span class="pill">PySpark</span>
-              <span class="pill">Databricks</span>
-              <span class="pill">Tableau</span>
-              <span class="pill">Flask</span>
-              <span class="pill">Pandas</span>
+              <span class="pill">Java</span>
+              <span class="pill">MATLAB</span>
+              <span class="pill">C++</span>
+              <span class="pill">Kotlin</span>
+              <span class="pill">MySQL</span>
+              <span class="pill">NoSQL</span>
+              <span class="pill">Go</span>
+              <span class="pill">Rust</span>
+              <span class="pill">TypeScript</span>
+
+              <span class="pill">TensorFlow</span>
+              <span class="pill">PyTorch</span>
               <span class="pill">Scikit-learn</span>
-              <span class="pill">Keras</span>
-              <span class="pill">Matplotlib</span>
-              <span class="pill">Seaborn</span>
-              <span class="pill">Git</span>
-              <span class="pill">Dash</span>
-              <span class="pill">Web Scraping</span>
-              <span class="pill">Time Series</span>
-              <span class="pill">Gen AI</span>
+              <span class="pill">Pandas</span>
+              <span class="pill">NumPy</span>
+              <span class="pill">OpenCV</span>
+              <span class="pill">Streamlit</span>
+              <span class="pill">Flask</span>
+              <span class="pill">Django</span>
+
+              <span class="pill">Machine Learning</span>
+              <span class="pill">Deep Learning</span>
+              <span class="pill">Computer Vision</span>
+              <span class="pill">HuggingFace LLMs</span>
+              <span class="pill">NLP</span>
+              <span class="pill">GenAI</span>
               <span class="pill">LangChain</span>
-              <span class="pill">Bedrock</span>
-              <span class="pill">RAG</span>
-              <span class="pill">Pinecone</span>
+              <span class="pill">MCP</span>
+              <span class="pill">Agentic AI</span>
+
+              <span class="pill">AWS</span>
+              <span class="pill">GCP</span>
+              <span class="pill">Firebase</span>
+              <span class="pill">CI/CD</span>
+              <span class="pill">Bitbucket</span>
+              <span class="pill">Kubernetes</span>
+              <span class="pill">Unix</span>
+              <span class="pill">Jenkins</span>
+
+              <span class="pill">APIs</span>
+              <span class="pill">Android UI</span>
+              <span class="pill">XML</span>
+              <span class="pill">Jetpack Compose</span>
+              <span class="pill">REST APIs</span>
+              <span class="pill">PostgreSQL</span>
             </div>
           </div>
         </div>
 
+        
+
         <div class="card sidebar-section">
           <div class="body">
-            <h4>PROJECTS</h4>
-            <p class="kv"><strong>AI Clone of Myself</strong><br><small>Jan 2024</small></p>
+            <h4>PUBLICATIONS</h4>
             <ul class="list-tight">
-              <li>Built an AI clone on AWS Bedrock with Llama 3.1, Boto3, Streamlit, and LangChain, using FAISS or Pinecone for vector search and CSV-based memory.</li>
-            </ul>
-            <p class="kv" style="margin-top:10px"><strong>Onion Supply Chain Forecasting - Research</strong><br><small>Jan 2022 • Published in Journal of Logistics, Supply Chain and Retail Management - Vol 5 Issue 1</small></p>
-            <ul class="list-tight">
-              <li>EDA and ARIMA-based forecasting for 2-year onion price trends working with a 3-person team.</li>
+              <li>Integrated System for Dynamic Cargo Handling and Traffic Management Using UAVs and UGVs with Reinforcement Learning — Indian Patent Office (202421073880).</li>
+              <li>Saket Lad, Chafekar B., Bide P. “Lung Cancer Classification Using Deep Learning: A Comprehensive Approach with Modified Convolutional Neural Networks,” 2024 International Conference on Computational Intelligence and Network Systems (CINS), DOI: 10.1109/CINS63881.2024.10864431.</li>
             </ul>
           </div>
         </div>
@@ -295,11 +325,10 @@
           <div class="body">
             <h4>ACHIEVEMENTS</h4>
             <ul class="list-tight">
-              <li>Speaker @ TedX Binghamton • Sep 2025</li>
-              <li>Mentor @ MyRealProduct (Helped 700+ aspirants build end-to-end AI products) • Jul 2024 - Present</li>
-              <li>Author @ Data & AI with Hari newsletter (Sharing weekly AI updates for the past 85 weeks) • Jul 2024 - Present</li>
+              <li>Selected among 60,000+ for Amazon ML Summer School 2024 covering core ML, optimization, and real-world use cases.</li>
+              <li>Ranked among the top 1% at Barclays Hack-o-Hire; deployed a scalable solution for real-time financial data analysis and customer query optimization.</li>
             </ul>
-            <p class="footnote">View profile: <a class="link" href="https://linkedin.com/in/hariprasad20/" target="_blank" rel="noreferrer">linkedin.com/in/hariprasad20/</a></p>
+            <p class="footnote">View profile: <a class="link" href="https://linkedin.com/in/saket-lad" target="_blank" rel="noopener noreferrer">linkedin.com/in/saket-lad</a></p>
           </div>
         </div>
       </aside>
