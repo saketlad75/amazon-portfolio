@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saket Lad</title>
+  <style>
+    :root{
+      --amazon-black:#131921;
+      --amazon-dark:#232f3e;
+      --amazon-gold:#febd69;
+      --amazon-orange:#f08804;
+      --amazon-link:#007185;
+      --star:#ffa41c;
+      --success:#067d62;
+      --badge-blue:#26a6fe;
+      --badge-green:#007600;
+      --muted:#555;
+      --border:#e3e6e6;
+      --bg:#ffffff;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font:15px/1.6 Arial, Helvetica, sans-serif;color:#111;background:#f6f6f6}
+
+    /* Top Nav */
+    .nav{background:#233448;color:#fff;padding:10px 16px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+    .nav .brand{font-weight:700;font-size:20px;letter-spacing:.5px}
+    .nav .brand img{display:block;height:24px}
+    .nav .search{flex:1;min-width:220px;display:flex}
+    .nav input{flex:1;padding:8px;border:none;border-radius:4px 0 0 4px}
+    .nav button{padding:8px 12px;border:none;background:var(--amazon-gold);border-radius:0 4px 4px 0;cursor:pointer}
+    .nav a{color:#fff;text-decoration:none;opacity:.9}
+
+    .subnav{background:var(--amazon-dark);color:#fff;padding:8px 16px;font-size:14px}
+
+    /* Layout */
+    .container{max-width:1180px;margin:18px auto;padding:0 16px}
+    .grid{display:grid;grid-template-columns:2fr 1fr;gap:22px}
+
+    /* Card */
+    .card{background:var(--bg);border:1px solid var(--border);border-radius:6px;box-shadow:0 1px 0 rgba(0,0,0,.04)}
+    .card .body{padding:18px}
+    .divider{height:1px;background:var(--border);margin:8px 0 16px}
+
+    /* Product header */
+    .title{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .title h1{margin:0;font-size:28px}
+    .meta{color:#565959;font-size:13px}
+    .rating{color:var(--star);font-size:16px}
+    .small-gray{color:#777;font-size:12px}
+    .badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .badge{font-size:12px;padding:2px 8px;border-radius:12px;border:1px solid var(--border);display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+    .badge.choice{background:#232f3e;color:#fff;border-color:#232f3e}
+    .badge.green{background:#edfaf1;color:#0a6b3a;border-color:#b6e2c8}
+
+    /* Two column left details */
+    h2.section{font-size:20px;margin:0 0 8px}
+    h3.role{margin:0;font-size:16px}
+    .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+    .pill{display:inline-block;background:#eef2f7;border:1px solid #d7dfea;border-radius:999px;padding:2px 10px;font-size:12px;color:#334155}
+    .loc{color:#565959}
+    ul.bullets{margin:8px 0 12px 18px}
+
+    /* Right sidebar */
+    aside .pricebox{padding:16px;border:1px solid var(--border);border-radius:8px}
+    .instock{color:var(--badge-green);font-weight:700}
+    .qty{display:flex;align-items:center;gap:8px;margin:8px 0}
+    .qty select{padding:6px;border:1px solid var(--border);border-radius:6px}
+    .cta{display:flex;flex-direction:column;gap:10px;margin:14px 0}
+    .btn{padding:10px 14px;border-radius:8px;border:1px solid #d5d9d9;background:linear-gradient(#ffd814,#f9a41a);cursor:pointer;font-weight:700}
+    .btn.buy{background:linear-gradient(#ffa41c,#f08804)}
+
+    .sidebar-section{margin-top:16px}
+    .sidebar-section h4{margin:0 0 6px;font-size:16px}
+    .kv{margin:0;color:#333}
+    .kv small{display:block;color:#666}
+    .list-tight{margin:6px 0 0 18px}
+
+    .edu-logo{height:1em;vertical-align:middle;margin-right:8px}
+    .education{font-size:18px}
+    .education h4{font-size:20px}
+    .education .edu-logo{height:2em}
+    .education .kv{margin-bottom:8px}
+    .company-logo{height:2em;vertical-align:middle;margin-right:8px}
+
+    .skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+
+    a.link{color:var(--amazon-link);text-decoration:none}
+
+    /* Footer note */
+    .footnote{font-size:12px;color:#666;margin-top:10px}
+
+    /* Print styles */
+    @media print{
+      .nav,.subnav,.btn,.qty,.footnote{display:none !important}
+      body{background:#fff}
+      .container{margin:0;padding:0}
+      .grid{gap:16px}
+      .card,.pricebox{border-color:#ccc;box-shadow:none}
+    }
+
+    @media (max-width: 900px){
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- Simulated Amazon header -->
+  <div class="nav">
+    <div class="brand"><img src="assets/Amazon-Symbol.jpg" alt="Amazon logo"></div>
+    <div class="search">
+      <input placeholder="what does a good employee look like?" />
+      <button>Search</button>
+    </div>
+    <a href="assets/Resume_Saket_Lad_SDE.pdf" download>Resume</a>
+    <a href="#">Account & Lists</a>
+    <a href="#">Returns</a>
+    <a href="#">Cart</a>
+  </div>
+  <div class="subnav">Deliver to New York, NY • Contact: +1-(631)-366-9454 • <a class="link" href="mailto:saket.lad@stonybrook.edu" style="color:#fff;text-decoration:underline">saket.lad@stonybrook.edu</a> • <a class="link" style="color:#fff;text-decoration:underline" href="https://linkedin.com/in/saket-lad" target="_blank" rel="noopener noreferrer">linkedin.com/in/saket-lad/</a></div>
+
+  <div class="container">
+    <div class="grid">
+
+      <!-- LEFT: Main content -->
+      <section class="card">
+        <div class="body">
+          <div class="title">
+            <div>
+              <h1>Saket Vijay Lad</h1>
+              <div class="row small-gray">
+                <span>Brand: Software Engineer</span>
+                <span>•</span>
+                <span class="rating">★★★★★</span>
+                <span class="small-gray">412,173 ratings • 1000+ answered questions</span>
+              </div>
+              <div class="badges">
+                <span class="badge choice">Amazon&#39;s Choice</span>
+                <span class="badge green">Climate Pledge Friendly</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <h2 class="section">Description</h2>
+          <p class="meta">Ambitious Data Science master’s candidate at Stony Brook University, with 2 patents, 4 research publications, and strong project experience in AI/ML. A Data Science and Machine Learning enthusiast with a keen interest in the Deep Learning, computer vision. I enjoy building and researching models that advance real-world applications across computer vision, NLP, and generative AI. Looking for opportunities where I can apply my knowledge and further pursue my interests in the field of Machine Learning, Deep Learning and Data Science with a summer 2026 internship. I have gained hands-on experience through my internships working on biometric systems and  financial document summarization. My projects span ensemble deep learning for medical imaging, generative AI for trade platforms, and NLP-driven chatbots, several of which have been recognized at hackathons like Barclays Hack-o-Hire and Amazon Sambhav . Currently, I am exploring LLMs, vision transformers.</p>
+
+          <div class="divider"></div>
+
+          <h2 class="section">Work Experience</h2>
+
+          <article>
+            <div class="row" style="justify-content:space-between">
+              <h3 class="role"><img class="company-logo" src="assets/SPJIMR-Logo.png" alt="SPJIMR logo">SP Jain Institute of Management and Research - Machine Learning Intern</h3>
+              <span class="loc">Mumbai, Maharashtra • Feb 2025 – May 2025</span>
+            </div>
+            <ul class="bullets">
+              <li>Enhanced factual consistency by 34% by fine-tuning the BART model on over 10-K filings using 48 gold-standard summaries, integrating a custom keyword-attention mechanism to prioritize financially salient terms.</li>
+              <li>Benchmarked BART vs. Gemini Pro across 32 companies, improving summarization quality by +8 ROUGE-L and achieving a BERT F1 of 81.11%, demonstrating human-level alignment and outperforming baseline models by 12%.</li>
+            </ul>
+          </article>
+
+          <article>
+            <div class="row" style="justify-content:space-between">
+              <h3 class="role"><img class="company-logo" src="assets/technocrat.png" alt="Technocrat Solutions logo">Technocrat Solutions - Software Engineer Intern</h3>
+              <span class="loc">Goregaon, Maharashtra • Dec 2024 – May 2025</span>
+            </div>
+            <ul class="bullets">
+              <li>Optimized a production-grade SQL Server database for large-scale biometric data, applying indexing, normalization, and partitioning to improve query performance by 40% and reduce latency under load.</li>
+              <li>Automated Python-based ETL pipelines for end-to-end data ingestion, transformation, and validation, reducing redundancy by 30%, improving data reliability, and accelerating retrieval speed across analytics modules.</li>
+            </ul>
+          </article>
+
+          <article>
+            <div class="row" style="justify-content:space-between">
+              <h3 class="role"><img class="company-logo" src="assets/iitb.svg" alt="IIT Bombay logo">Indian Institute of Technology, Bombay - Machine Learning Research Intern</h3>
+              <span class="loc">Mumbai, Maharashtra • Jan 2024 – Aug 2024</span>
+            </div>
+            <ul class="bullets">
+              <li>Engineered a mobile app for contactless fingerprint authentication using Kotlin, YOLOv8x, and TensorFlow, achieving 2.5% EER and reducing latency by 20% over 4+ deployments.</li>
+              <li>Led development of a contactless fingerprint recognition system for the Government of India, collaborating with UIDAI and Mahindra Defense, securing $250K in funding via industry–academia partnerships.</li>
+              <li>Designed a high-accuracy deep learning model for contactless palmprint identification, achieving an Equal Error Rate (EER) of 2.65% and improving recognition accuracy by 21% over baseline CNNs.</li>
+              <li>Implemented a Siamese Neural Network using shearlets and contourlets for precise feature extraction, reducing training loss and epochs by 33% and parameters by 37% over state-of-the-art models.</li>
+              <li>Built a custom TensorFlow wavelet library to incorporate Haar and db2 wavelet backpropagation, accelerating model convergence by 1.4x and improving training efficiency on edge devices.</li>
+            </ul>
+          </article>
+
+          <div class="divider"></div>
+
+          <h2 class="section">Projects</h2>
+
+          <article>
+            <h3 class="role">SafeArt: Cloud-Native Poster Compliance Platform · <a class="link" href="https://github.com/saketlad75/safeart" target="_blank" rel="noopener noreferrer">GitHub</a></h3>
+            <div class="meta">Java, AWS (S3, DynamoDB, SQS, Step Functions), Docker</div>
+            <ul class="bullets">
+              <li>Architected a serverless microservice on AWS using API Gateway, Lambda, S3, DynamoDB, and SQS for async image compliance analysis, enabling 10K+ jobs/hour.</li>
+              <li>Added operational resilience with idempotent requests, retry/backoff, DLQ handling, and minimal CloudWatch monitoring, achieving P95 < 2s cached evaluations and reducing MTTR by 60%.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h3 class="role">ExportEase: Global Reach, Seamless Collaboration · <a class="link" href="https://drive.google.com/file/d/1rB9iB4FR5CVPO5qXhtkkF9z-iJZZ7I0d/view" target="_blank" rel="noopener noreferrer">Demo</a></h3>
+            <div class="meta">AWS, Python, HuggingFace, Django</div>
+            <ul class="bullets">
+              <li>Engineered an end-to-end trade communication platform integrating AWS Translate and generative AI for multilingual summarization, reducing manual effort by 30% and response time by 45%.</li>
+              <li>Developed Doc Buddy, an AI-powered assistant using HuggingFace LayoutLM for Talk to PDF, real-time Q&A, and multilingual summaries, accelerating document processing by 4x and enhancing collaboration across 5+ countries.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h3 class="role">Barclays ConnectCare · <a class="link" href="https://github.com/saketlad75/ConnectCare-Hack-o-Hire" target="_blank" rel="noopener noreferrer">GitHub</a></h3>
+            <div class="meta">Kotlin, AWS (S3, EC2), Python, GCP, NLP, Django</div>
+            <ul class="bullets">
+              <li>Innovated an AI-driven support system using GCP Dialogflow and sentiment-aware NLP, cutting backend latency by 35% and improving critical issue resolution time by 45%.</li>
+              <li>Deployed a secure Kotlin–Firebase Android app with AWS S3 integration, providing real-time access to 1.5K+ users and reducing support response time by 40%.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h3 class="role">ARMD-NetX: An Ensemble Learning Network for ARMD Detection · <a class="link" href="https://drive.google.com/file/d/1IBGs17hhEvPy4PPVrgi_K8lZoSKz3hCk/view" target="_blank" rel="noopener noreferrer">Paper</a> · <a class="link" href="https://www.kaggle.com/datasets/saketlad/armd-combined-dataset-fundus-and-oct" target="_blank" rel="noopener noreferrer">Dataset</a></h3>
+            <div class="meta">OpenCV, TensorFlow, Ensemble Learning</div>
+            <ul class="bullets">
+              <li>Built a multimodal deep learning framework combining CNNs and ensemble meta-classifiers for ARMD diagnosis, achieving 99.41% accuracy on OCT and 97.70% on fundus images, outperforming baselines by 12–15%.</li>
+              <li>Published an OCT–Fundus dataset with 12K+ labeled images and proposed a Grad-CAM–based diagnostic pipeline, improving model explainability by 28% and advancing XAI in ophthalmology.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- RIGHT: Sidebar -->
+      <aside>
+        <div class="card">
+          <div class="body pricebox">
+            <div class="instock">In Stock</div>
+            <div class="qty">
+              <strong>Qty:</strong>
+              <select aria-label="Quantity">
+                <option>1</option><option>2</option><option>3</option>
+              </select>
+            </div>
+            <div class="cta">
+              <button class="btn">Add to Cart</button>
+              <button class="btn buy">Buy Now</button>
+            </div>
+            <div class="small-gray">Customers who viewed this also viewed: <em>academic projects, achievements, and skills</em>.</div>
+          </div>
+        </div>
+
+        <div class="card sidebar-section">
+          <div class="body education">
+            <h4>EDUCATION</h4>
+            <p class="kv"><img class="edu-logo" src="assets/sbu.png" alt="Stony Brook University logo"><strong>Stony Brook University</strong><br><small>Master of Science, Data Science • New York, NY • 2025-2027</small></p>
+            <p class="kv"><img class="edu-logo" src="assets/spit.png" alt="Sardar Patel Institute of Technology logo"><strong>Sardar Patel Institute of Technology</strong><br><small>Bachelor of Technology, Electronics and Telecommunication Engineering • India • 2021-2025</small></p>
+          </div>
+        </div>
+
+        <div class="card sidebar-section">
+          <div class="body">
+            <h4>SKILLS</h4>
+            <div class="skills-grid">
+              <span class="pill">Python</span>
+              <span class="pill">Java</span>
+              <span class="pill">MATLAB</span>
+              <span class="pill">C++</span>
+              <span class="pill">Kotlin</span>
+              <span class="pill">MySQL</span>
+              <span class="pill">NoSQL</span>
+              <span class="pill">Go</span>
+              <span class="pill">Rust</span>
+              <span class="pill">TypeScript</span>
+
+              <span class="pill">TensorFlow</span>
+              <span class="pill">PyTorch</span>
+              <span class="pill">Scikit-learn</span>
+              <span class="pill">Pandas</span>
+              <span class="pill">NumPy</span>
+              <span class="pill">OpenCV</span>
+              <span class="pill">Streamlit</span>
+              <span class="pill">Flask</span>
+              <span class="pill">Django</span>
+
+              <span class="pill">Machine Learning</span>
+              <span class="pill">Deep Learning</span>
+              <span class="pill">Computer Vision</span>
+              <span class="pill">HuggingFace LLMs</span>
+              <span class="pill">NLP</span>
+              <span class="pill">GenAI</span>
+              <span class="pill">LangChain</span>
+              <span class="pill">MCP</span>
+              <span class="pill">Agentic AI</span>
+
+              <span class="pill">AWS</span>
+              <span class="pill">GCP</span>
+              <span class="pill">Firebase</span>
+              <span class="pill">CI/CD</span>
+              <span class="pill">Bitbucket</span>
+              <span class="pill">Kubernetes</span>
+              <span class="pill">Unix</span>
+              <span class="pill">Jenkins</span>
+
+              <span class="pill">APIs</span>
+              <span class="pill">Android UI</span>
+              <span class="pill">XML</span>
+              <span class="pill">Jetpack Compose</span>
+              <span class="pill">REST APIs</span>
+              <span class="pill">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+
+        
+
+        <div class="card sidebar-section">
+          <div class="body">
+            <h4>PUBLICATIONS</h4>
+            <ul class="list-tight">
+              <li>Integrated System for Dynamic Cargo Handling and Traffic Management Using UAVs and UGVs with Reinforcement Learning — Indian Patent Office (202421073880).</li>
+              <li>Saket Lad, Chafekar B., Bide P. “Lung Cancer Classification Using Deep Learning: A Comprehensive Approach with Modified Convolutional Neural Networks,” 2024 International Conference on Computational Intelligence and Network Systems (CINS), DOI: 10.1109/CINS63881.2024.10864431.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card sidebar-section">
+          <div class="body">
+            <h4>ACHIEVEMENTS</h4>
+            <ul class="list-tight">
+              <li>Selected among 60,000+ for Amazon ML Summer School 2024 covering core ML, optimization, and real-world use cases.</li>
+              <li>Ranked among the top 1% at Barclays Hack-o-Hire; deployed a scalable solution for real-time financial data analysis and customer query optimization.</li>
+            </ul>
+            <p class="footnote">View profile: <a class="link" href="https://linkedin.com/in/saket-lad" target="_blank" rel="noopener noreferrer">linkedin.com/in/saket-lad</a></p>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</body>
+</html>
